@@ -1,0 +1,10 @@
+a=c(44,46,34,43,38,38,40,36,38,42,47,52,44,46,49,36,43,32,33,39)
+f=c("w1","w2","w3","w4","w5")
+k=5
+r=4
+worker=gl(k,1,r*k,factor(f))
+worker
+machine=gl(r,k,r*k)
+machine
+result=aov(a~worker+machine)
+summary(result)
